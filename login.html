@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R K Cargo | Login </title>
+    <link rel="stylesheet" href="css/style.css">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+91 7383083735</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>rkcargo@example.info</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="https://www.facebook.com/jeet.raval.7528">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://twitter.com/Bhailu1369">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.linkedin.com/in/jeet-raval-5868312">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.instagram.com/itz_jeet31/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="https://www.youtube.com/channel/UCuRQ30N2AX-rQig7xht_VUQ">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>R K Cargo</h1>
+            </a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <section>
+        <div class="login-container">
+          <div class="login-form">
+            <h2>Login</h2>
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Your Username" required>
+              </div>
+      
+              <div class="form-group password-input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Your Password" required>
+                <span class="show-password" onclick="togglePasswordVisibility()"></span>
+              </div>
+      
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR
+        
+        <p>--------- New User? ---------</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick = "window.location.href='register.html';">Register</button><br><br>
+          </section>
+
+          <footer>
+            <h6>&copy; 2023 Online Transportation Service. All rights reserved.</h6>
+          </footer> 
+    <script>
+        function initMap() {
+      const mapOptions = {
+        center: { lat: 37.7749, lng: -122.4194 }, // Set the initial map center
+        zoom: 10 // Set the initial zoom level
+      };
+
+      const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+  </script>
+    <script>
+      // Load the map after the API script has been fetched
+      google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+    <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var showPasswordIcon = document.querySelector(".show-password");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        showPasswordIcon.classList.add("visible");
+      } else {
+        passwordInput.type = "password";
+        showPasswordIcon.classList.remove("visible");
+      }
+    }
+    
+    </script>
+</body>
+</html>

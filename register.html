@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R K Cargo | Login </title>
+    <link rel="stylesheet" href="css/style.css">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+91 7383083735</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>rkcargo@example.info</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="https://www.facebook.com/jeet.raval.7528">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://twitter.com/Bhailu1369">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.linkedin.com/in/jeet-raval-5868312">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.instagram.com/itz_jeet31/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="https://www.youtube.com/channel/UCuRQ30N2AX-rQig7xht_VUQ">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>R K Cargo</h1>
+            </a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <main>
+       <section>
+      
+        <h2>Register</h2>
+        <form>
+          <label for="fullname">Fullname</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <label for="newusername">Username</label>
+          <input type="text" id="newusername" name="newusername" placeholder="Username" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Password" required><br>
+          <input type="button" id="signup" name="signup_submit" value="Register" style="background-color: #ff3205; color:white" > </button>
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----Existing User?------<br>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick = "window.location.href='login.html';">
+        Login</button>
+      </section>
+    </main>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+   import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAGPcg-lzuZ-YMpug-0QiR4HI4z79d6V0E",
+      authDomain: "authentication-app-85da4.firebaseapp.com",
+      databaseURL: "https://authentication-app-85da4-default-rtdb.firebaseio.com",
+      projectId: "authentication-app-85da4",
+      storageBucket: "authentication-app-85da4.appspot.com",
+      messagingSenderId: "686549706502",
+      appId: "1:686549706502:web:beb82f5bc74dc3e9a36087"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+  const auth = getAuth();
+  
+  signup.addEventListener('click',(e) => {
+  
+     var fullname = document.getElementById('fullname').value;
+     var email = document.getElementById('email').value;
+     var newusername = document.getElementById('newusername').value;
+     var password = document.getElementById('password').value;
+  
+  createUserWithEmailAndPassword(auth,email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      
+      set(ref(database, 'users/' + user.uid),{
+        username: newusername,
+        email: email
+       })
+      alert('user created!');
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+  
+      alert(errorCode+errorMessage);
+      // ..
+    });
+  
+  });
+  </script>
+  <footer>
+    <h6>&copy; 2023 Online Transportation Service. All rights reserved.</h6>
+
+  </footer>
+
+</body>
+</html>
