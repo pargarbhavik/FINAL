@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link href="css/rought.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:
+        ital@1&family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rought.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R K Cargo | Login </title>
+    <link rel="stylesheet" href="css/style.css">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Topbar Start -->
+   <div class="container-fluid bg-dark">
+    <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center text-white">
+                <small><i class="fa fa-phone-alt mr-2"></i>+91 7383083735</small>
+                <small class="px-3">|</small>
+                <small><i class="fa fa-envelope mr-2"></i>rkcargo@example.info</small>
+            </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+                <a class="text-white px-2" href="https://www.facebook.com/jeet.raval.7528">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="text-white px-2" href="https://twitter.com/Bhailu1369">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-white px-2" href="https://www.linkedin.com/in/jeet-raval-5868312">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="text-white px-2" href="https://www.instagram.com/itz_jeet31/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="text-white pl-2" href="https://www.youtube.com/channel/UCuRQ30N2AX-rQig7xht_VUQ">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>R K Cargo</h1>
+        </a>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+    <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form method="POST">
+            <h4>Account</h4>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="First Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Last Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="email" placeholder="Email Address" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4> Date of Birth</h4>
+                    <input type="date" class="dob">
+                </div>
+                <div class="input-box">
+                    <h4> Gender</h4>
+                    <input type="radio" id="b1" name="gender" checked class="radio">
+                    <label for="b1">Male</label>
+                    <input type="radio" id="b2" name="gender" class="radio">
+                    <label for="b2">Female</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" id="bc1" checked class="radio">
+                    <label for="bc1"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
+                    <input type="radio" name="pay" id="bc2" class="radio">
+                    <label for="bc2"><span><i class="fa fa-cc-visa"></i> Debit Card</span></label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="tel" placeholder="Card Number" maxlength="11" required class="name">
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="tel" placeholder="Card CVC" maxlength="3" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <select name='expireMM' id='expireMM'>
+                        <option value=''>Month</option>
+                        <option value='01'>January</option>
+                        <option value='02'>February</option>
+                        <option value='03'>March</option>
+                        <option value='04'>April</option>
+                        <option value='05'>May</option>
+                        <option value='06'>June</option>
+                        <option value='07'>July</option>
+                        <option value='08'>August</option>
+                        <option value='09'>September</option>
+                        <option value='10'>October</option>
+                        <option value='11'>November</option>
+                        <option value='12'>December</option>
+                    </select> 
+                    <select name='expireYY' id='expireYY'>
+                        <option value=''>Year</option>
+                        <option value='20'>2020</option>
+                        <option value='21'>2021</option>
+                        <option value='22'>2022</option>
+                        <option value='23'>2023</option>
+                        <option value='24'>2024</option>
+                        <option value='20'>2025</option>
+                        <option value='26'>2026</option>
+                        <option value='27'>2027</option>
+                        <option value='28'>2028</option>
+                        <option value='29'>2029</option>
+                        <option value='30'>2030</option>
+
+                    </select> 
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                  <button id="myButton" class="float-left submit-button" >PAY NOW</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "sucessfull.html";
+    };
+</script>
+                </div>
+            </div>
+        </form>
+    </div>
+     <script>
+  // Set up Stripe.js and Elements to use in checkout form
+var stripe = Stripe('Dummy');
+var elements = stripe.elements();
+
+// Create an instance of the card Element
+var card = elements.create('card');
+// Add an instance of the card Element into the `card-element` <div>
+card.mount('#card-element');
+
+// Handle form submission
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+event.preventDefault();
+// Disable the submit button to prevent repeated clicks
+document.getElementById('submit').disabled = true;
+// Create a token from the card information entered by the user
+stripe.createToken(card).then(function(result) {
+  if (result.error) {
+    // Inform the user if there was an error
+    var errorElement = document.getElementById('card-errors');
+    errorElement.textContent = result.error.message;
+    // Re-enable the submit button to allow user to fix the error and resubmit
+    document.getElementById('submit').disabled = false;
+  } else {
+    // Send the token to your server to process the payment
+    stripeTokenHandler(result.token);
+  }
+});
+});
+
+// Submit the form with the token ID to your server
+function stripeTokenHandler(token) {
+
+// Insert the token ID into the form so it gets submitted to the server
+var form = document.getElementById('payment-form');
+var hiddenInput = document.createElement('input');
+hiddenInput.setAttribute('type', 'hidden');
+hiddenInput.setAttribute('name', 'stripeToken');
+hiddenInput.setAttribute('value', token.id);
+form.appendChild(hiddenInput);
+// Submit the form
+form.submit();
+}
+</script>
+</body>
+
+</html><!DOCTYPE html>
+
